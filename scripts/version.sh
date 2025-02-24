@@ -10,4 +10,4 @@ VERSION_TAG="v$VERSION"
 
 git add --all
 git commit -m "$VERSION"
-git tag -a $VERSION_TAG
+git tag -a $VERSION_TAG -m "$VERSION"
