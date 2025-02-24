@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
-VERSION=$1
+version="$1"
 
-ifndef VERSION
-    $(error VERSION is undefined)
-endif
+if [ -z ${version} ]; then
+    echo version is undefined
+    exit 1
+fi
 
-VERSION_TAG="v$VERSION"
+version_tag="v$version"
 
 git add --all
-git commit -m "$VERSION"
-git tag -a $VERSION_TAG -m "$VERSION"
+git commit -m "$version"
+git tag -a $version_tag -m "$version"
