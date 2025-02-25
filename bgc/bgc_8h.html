@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BGC: /home/voidvoxel/src/bgc/include/bgc.h File Reference</title>
+<title>BGC: bgc.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">BGC<span id="projectnumber">&#160;v0.0.0</span>
+   <div id="projectname">BGC<span id="projectnumber">&#160;v0.1.3</span>
    </div>
   </td>
  </tr>
@@ -83,14 +83,28 @@ $(function() {
 <code>#include &lt;stddef.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for bgc.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="bgc_8h__incl.png" border="0" usemap="#abgc_8h" alt=""/></div>
+<map name="abgc_8h" id="abgc_8h">
+<area shape="rect" title="A simple mark and sweep garbage collector for C." alt="" coords="169,5,226,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,88,107"/>
+<area shape="rect" title=" " alt="" coords="112,80,187,107"/>
+<area shape="rect" title=" " alt="" coords="211,80,282,107"/>
+<area shape="rect" title=" " alt="" coords="306,80,377,107"/>
+</map>
+</div>
 </div>
 <p><a href="bgc_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbgc__Allocation.html">bgc_Allocation</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The allocation metadata for a managed memory allocation.  <a href="structbgc__Allocation.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbgc__AllocationMap.html">bgc_AllocationMap</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A hash map that holds the allocation metadata objects and allows O(1) retrieval. Collision resolution is currently implemented using separate chaining.  <a href="structbgc__AllocationMap.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbgc__GC.html">bgc_GC</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A garbage collector, used to manage memory.  <a href="structbgc__GC.html#details">More...</a><br /></td></tr>
@@ -190,9 +204,13 @@ Typedefs</h2></td></tr>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>bgc_Deconstructor</b>) (void *)</td></tr>
 <tr class="memdesc:a4ccfe9eb87899ae6cc2fce3ad70d8265"><td class="mdescLeft">&#160;</td><td class="mdescRight">A deconstructor to call after freeing managed memory. <br /></td></tr>
 <tr class="separator:a4ccfe9eb87899ae6cc2fce3ad70d8265"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad13f0dadba1bc68466ee51ece5f1a694"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structbgc__Allocation.html">bgc_Allocation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bgc_8h.html#ad13f0dadba1bc68466ee51ece5f1a694">bgc_Allocation</a></td></tr>
+<tr class="memitem:ad13f0dadba1bc68466ee51ece5f1a694"><td class="memItemLeft" align="right" valign="top"><a id="ad13f0dadba1bc68466ee51ece5f1a694" name="ad13f0dadba1bc68466ee51ece5f1a694"></a>
+typedef struct <a class="el" href="structbgc__Allocation.html">bgc_Allocation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bgc_Allocation</b></td></tr>
+<tr class="memdesc:ad13f0dadba1bc68466ee51ece5f1a694"><td class="mdescLeft">&#160;</td><td class="mdescRight">The allocation metadata for a managed memory allocation. <br /></td></tr>
 <tr class="separator:ad13f0dadba1bc68466ee51ece5f1a694"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f8e6e27cd0288b18efeea7fe9842ddf"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structbgc__AllocationMap.html">bgc_AllocationMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bgc_8h.html#a8f8e6e27cd0288b18efeea7fe9842ddf">bgc_AllocationMap</a></td></tr>
+<tr class="memitem:a8f8e6e27cd0288b18efeea7fe9842ddf"><td class="memItemLeft" align="right" valign="top"><a id="a8f8e6e27cd0288b18efeea7fe9842ddf" name="a8f8e6e27cd0288b18efeea7fe9842ddf"></a>
+typedef struct <a class="el" href="structbgc__AllocationMap.html">bgc_AllocationMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bgc_AllocationMap</b></td></tr>
+<tr class="memdesc:a8f8e6e27cd0288b18efeea7fe9842ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">A hash map that holds the allocation metadata objects and allows O(1) retrieval. Collision resolution is currently implemented using separate chaining. <br /></td></tr>
 <tr class="separator:a8f8e6e27cd0288b18efeea7fe9842ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aded0bf7000a2c084f7ccca9ee4f1626b"><td class="memItemLeft" align="right" valign="top"><a id="aded0bf7000a2c084f7ccca9ee4f1626b" name="aded0bf7000a2c084f7ccca9ee4f1626b"></a>
 typedef struct <a class="el" href="structbgc__GC.html">bgc_GC</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bgc_GC</b></td></tr>
@@ -573,7 +591,7 @@ void *(*&#160;</td><td class="memItemRight" valign="bottom"><b>BGC_LIBC_MALLOC</
 <div class="line">                                        bgc_start(<a class="code hl_variable" href="bgc_8h.html#ad6c7dd5ef1d91e31851b18d9fd2213ea">BGC_GLOBAL_GC</a>, &amp;bgc__bp);\</div>
 <div class="line">                                        (void) 0</div>
 <div class="ttc" id="abgc_8h_html_ad6c7dd5ef1d91e31851b18d9fd2213ea"><div class="ttname"><a href="bgc_8h.html#ad6c7dd5ef1d91e31851b18d9fd2213ea">BGC_GLOBAL_GC</a></div><div class="ttdeci">bgc_GC * BGC_GLOBAL_GC</div><div class="ttdoc">A global instance of the garbage collector for use by single-threaded applications.</div><div class="ttdef"><b>Definition:</b> libbgc.c:83</div></div>
-<div class="ttc" id="astructbgc__GC_html"><div class="ttname"><a href="structbgc__GC.html">bgc_GC</a></div><div class="ttdoc">A garbage collector, used to manage memory.</div><div class="ttdef"><b>Definition:</b> bgc.h:50</div></div>
+<div class="ttc" id="astructbgc__GC_html"><div class="ttname"><a href="structbgc__GC.html">bgc_GC</a></div><div class="ttdoc">A garbage collector, used to manage memory.</div><div class="ttdef"><b>Definition:</b> bgc.h:39</div></div>
 </div><!-- fragment -->
 <p>Begin the global garbage collector for all single-threaded applications. </p>
 
@@ -665,39 +683,6 @@ void *(*&#160;</td><td class="memItemRight" valign="bottom"><b>BGC_LIBC_MALLOC</
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated managed object. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="ad13f0dadba1bc68466ee51ece5f1a694" name="ad13f0dadba1bc68466ee51ece5f1a694"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad13f0dadba1bc68466ee51ece5f1a694">&#9670;&nbsp;</a></span>bgc_Allocation</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structbgc__Allocation.html">bgc_Allocation</a> <a class="el" href="structbgc__Allocation.html">bgc_Allocation</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >The allocation object.</p>
-<p >The allocation object holds all metadata for a memory location in one place. </p>
-
-</div>
-</div>
-<a id="a8f8e6e27cd0288b18efeea7fe9842ddf" name="a8f8e6e27cd0288b18efeea7fe9842ddf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f8e6e27cd0288b18efeea7fe9842ddf">&#9670;&nbsp;</a></span>bgc_AllocationMap</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structbgc__AllocationMap.html">bgc_AllocationMap</a> <a class="el" href="structbgc__AllocationMap.html">bgc_AllocationMap</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >The allocation hash map.</p>
-<p >The core data structure is a hash map that holds the allocation objects and allows O(1) retrieval given the memory location. Collision resolution is implemented using separate chaining. </p>
 
 </div>
 </div>

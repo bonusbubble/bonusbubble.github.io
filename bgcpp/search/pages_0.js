@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bgcpp_0',['bgcpp',['../index.html',1,'']]]
+  ['bgc_2b_2b_0',['BGC++',['../index.html',1,'']]]
 ];

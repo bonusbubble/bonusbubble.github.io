@@ -1,5 +1,5 @@
 <map id="bgc_GC" name="bgc_GC">
 <area shape="rect" id="node1" title="A garbage collector, used to manage memory." alt="" coords="43,184,113,211"/>
-<area shape="rect" id="node2" href="$structbgc__AllocationMap.html" title=" " alt="" coords="5,95,151,121"/>
-<area shape="rect" id="node3" href="$structbgc__Allocation.html" title=" " alt="" coords="19,5,137,32"/>
+<area shape="rect" id="node2" href="$structbgc__AllocationMap.html" title="A hash map that holds the allocation metadata objects and allows O(1) retrieval. Collision resolution..." alt="" coords="5,95,151,121"/>
+<area shape="rect" id="node3" href="$structbgc__Allocation.html" title="The allocation metadata for a managed memory allocation." alt="" coords="19,5,137,32"/>
 </map>
